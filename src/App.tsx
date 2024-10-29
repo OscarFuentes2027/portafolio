@@ -1,8 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { useState } from 'react'
 import Header from './components/Header'
 import Abaut from './components/Abaut'
+import Skills from './components/Skills'
 
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <>
     <Header/>
     <Abaut/>
+    <Skills/>
     </>
   )
 }

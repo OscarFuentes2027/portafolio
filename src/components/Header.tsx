@@ -1,12 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "./style.css";
+import './style.css'
 
 function Header() {
   return (
-    <div>
 
-      <nav className="navbar navbar-expand-lg  fixed-top">
+<header className="sticky-top pt-2">
+
+      <nav className="container-xxl navbar navbar-expand-lg bg-primary rounded-pill p-2">
         <div className="container-fluid">
           <a className="navbar-brand me-auto" href="#">
             LOGO
@@ -18,7 +17,7 @@ function Header() {
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
-          >
+            >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
@@ -26,7 +25,7 @@ function Header() {
             tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-          >
+            >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                 Logo
@@ -36,7 +35,7 @@ function Header() {
                 className="btn-close"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
-              ></button>
+                ></button>
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
@@ -45,7 +44,7 @@ function Header() {
                     className="nav-link mx-lg-2 active"
                     aria-current="page"
                     href="#"
-                  >
+                    >
                     Inicio
                   </a>
                 </li>
@@ -69,8 +68,8 @@ function Header() {
           </div>
         </div>
       </nav>
+                    </header>
 
-    </div>
   );
 }
 
