@@ -1,6 +1,7 @@
 import React from 'react';
-import './Abaut.css'; // archivo CSS opcional para estilos adicionales
+import './Abaut.scss'; // archivo CSS opcional para estilos adicionales
 import SvgImage from '../assets/Component1.svg'; 
+import Oscar1 from '../assets/images/test.png'
 
 const Abaut = () => {
     return (
@@ -17,7 +18,8 @@ const Abaut = () => {
             </div>
     
             {/* Columna derecha: Imagen SVG */}
-            <div className="col-8 col-lg-6 ">
+            <div className="hero__images col-8 col-lg-6 ">
+              <img src={Oscar1} alt="Tu descripción" className="hero__img img-fluid w-100" />
               <img src={SvgImage} alt="Tu descripción" className="img-fluid" />
             </div>
           </div>

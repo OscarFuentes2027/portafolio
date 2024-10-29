@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Abaut from './components/Abaut'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <Header/>
     <Abaut/>
     <Skills/>
+    <Projects/>
+    <Footer/>
     </>
   )
 }

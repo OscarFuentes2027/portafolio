@@ -3,9 +3,9 @@ import './style.css'
 function Header() {
   return (
 
-<header className="sticky-top pt-2">
+<header className="container-xxl sticky-top pt-2">
 
-      <nav className="container-xxl navbar navbar-expand-lg bg-primary rounded-pill p-2">
+      <nav className="navbar navbar-expand-lg bg-primary rounded-pill p-2">
         <div className="container-fluid">
           <a className="navbar-brand me-auto" href="#">
             LOGO

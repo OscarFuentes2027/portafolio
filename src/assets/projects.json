@@ -1,0 +1,43 @@
+{
+    "projects": [
+      {
+        "title": "WebSemantixIA",
+        "description": "Un proyecto de inteligencia artificial aplicada a la web semántica, mejorando la interpretación de datos y la personalización de contenido.",
+        "images": [
+          "https://example.com/image_websemantixia1.jpg",
+          "https://example.com/image_websemantixia2.jpg"
+        ],
+        "availability": "Disponible"
+      },
+      {
+        "title": "SER",
+        "description": "Sistema de gestión de recursos empresariales enfocado en optimizar procesos internos para pequeñas y medianas empresas.",
+        "images": [
+          "https://example.com/image_ser1.jpg",
+          "https://example.com/image_ser2.jpg",
+          "https://example.com/image_ser3.jpg",
+          "https://example.com/image_ser4.jpg"
+        ],
+        "availability": "En desarrollo"
+      },
+      {
+        "title": "GameCenter",
+        "description": "Plataforma de juegos en línea con integración de múltiples géneros, incluyendo arcade y simulación, con opciones multijugador.",
+        "images": [
+          "https://example.com/image_gamecenter1.jpg",
+          "https://example.com/image_gamecenter2.jpg"
+        ],
+        "availability": "Disponible"
+      },
+      {
+        "title": "Clínica de Belleza Lily",
+        "description": "Sitio web para una clínica de belleza, con sistema de reservas en línea y sección de información sobre tratamientos estéticos.",
+        "images": [
+          "https://example.com/image_clinicabelleza1.jpg",
+          "https://example.com/image_clinicabelleza2.jpg"
+        ],
+        "availability": "En desarrollo"
+      }
+    ]
+  }
+  

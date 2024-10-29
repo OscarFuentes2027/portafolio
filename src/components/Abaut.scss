@@ -1,0 +1,18 @@
+/* SobreMi.css */
+
+.h1 {
+  font-size: 4em;
+}
+
+.hero {
+  &__img {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+  }
+  &__images {
+    position: relative;
+  }
+}
