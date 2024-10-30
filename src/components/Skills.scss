@@ -1,0 +1,11 @@
+
+
+  .oscar2-large {
+    width: 100%; // Tamaño en pantallas pequeñas
+  
+    @media (min-width: 992px) { // Para pantallas grandes
+      width: 100%; // Ajusta a 85% solo en pantallas grandes
+    }
+  }
+  
+  

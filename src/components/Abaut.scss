@@ -1,8 +1,25 @@
 /* SobreMi.css */
 
-.h1 {
-  font-size: 4em;
+#hero {
+  font-family: 'Montserrat', sans-serif;
+
+  h1 {
+    font-size: 5rem; // Ajusta el tamaño según prefieras
+    font-weight: 700;
+    line-height: 0.8;
+    letter-spacing: -5px;
+  }
+
+  p {
+    font-size: 1rem; // Un poco más grande que el tamaño normal
+    line-height: 1.6; // Para mejorar la legibilidad
+  }
+
+  .btn {
+    font-size: 1rem; // Ajusta el tamaño del texto del botón si deseas
+  }
 }
+
 
 .hero {
   &__img {
