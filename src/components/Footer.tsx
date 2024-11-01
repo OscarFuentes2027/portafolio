@@ -9,24 +9,26 @@ import "./Footer.scss";
 
 function Footer() {
   const [formData, setFormData] = useState({
-    reply_to: '',
-    message: '',
+    reply_to: "", // Cambiado a reply_to
+    message: "", // Cambiado a message
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Configura tus IDs de EmailJS
-    const SERVICE_ID = 'default_service';
-    const TEMPLATE_ID = 'template_4cgicha';
-    const USER_ID = 'n5C7U3trzBPEtHkle'; // Aquí cambia tu user_id
+    const SERVICE_ID = "default_service";
+    const TEMPLATE_ID = "template_4cgicha";
+    const USER_ID = "n5C7U3trzBPEtHkle";
 
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
@@ -43,35 +45,43 @@ function Footer() {
   return (
     <section className="my-section container-lg">
       <div className="row g-0 h-100 justify-content-center">
-        {/* Columna izquierda con formulario superpuesto */}
+        <h2 className="display-5 text-uppercase mb-5">Contactame</h2>
         <div className="col-12 col-lg-6 d-flex justify-content-center position-relative">
-          <img src={izquierda} alt="SVG Izquierdo" className="img-fluid svg-background" />
+          <img
+            src={izquierda}
+            alt="SVG Izquierdo"
+            className="img-fluid svg-background"
+          />
           <div className="form-overlay">
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="asunto"
+                name="reply_to" // Cambiado a reply_to
                 placeholder="Asunto"
                 className="form-control mb-3"
                 value={formData.reply_to}
                 onChange={handleChange}
               />
               <textarea
-                name="descripcion"
-                placeholder="Descripción"
+                name="message" // Cambiado a message
+                placeholder="Mensaje"
                 className="form-control mb-3"
                 rows={10}
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
-              <button type="submit" className="btn btn-primary">Enviar</button>
+              <button type="submit" className="btn btn-primary">
+                Enviar
+              </button>
             </form>
           </div>
         </div>
-
-        {/* Columna derecha con información de contacto superpuesta */}
         <div className="col-12 col-lg-6 d-flex justify-content-center position-relative">
-          <img src={derecha} alt="SVG Derecho" className="img-fluid svg-background" />
+          <img
+            src={derecha}
+            alt="SVG Derecho"
+            className="img-fluid svg-background"
+          />
           <div className="contact-overlay">
             <div className="contact-item d-flex align-items-center mb-3">
               <img src={emailIcon} alt="Email Icon" className="icon" />

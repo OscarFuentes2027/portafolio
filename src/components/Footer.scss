@@ -1,82 +1,58 @@
 .my-section {
-    .svg-background {
-      position: relative;
-      width: 100%;
-    }
-  
-    .form-overlay {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -20%);
-        width: 80%;
-        max-width: 400px;
-      }
-      
-      .contact-overlay {
-        position: absolute;
-        top: 20%;
-        right: 10%;
-        transform: translateY(-20%);
-        width: 80%;
-        max-width: 300px;
-      }
-      
-      .icon {
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-      }
-      
-      .form-control {
-        border-radius: 20px;
-        padding: 0.75rem;
-      }
+  position: relative;  // Esto ayuda a posicionar elementos absolutos dentro del contenedor.
+  display: flex;
+  align-items: center;
+  height: 100%;  
 
-      body {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400; // 400 es el peso regular de Montserrat
-      }
-      
-  
-      button {
-        background-color: #FF9E15;
-        color: #fff;
-        border-radius: 20px;
-        padding: 0.5rem 1.5rem;
-      }
-    }
-  
-  
-  .my-section {
-    .svg-background {
-      position: relative;
-      width: 100%;
-    }
-  
-    .contact-overlay {
+  .svg-background {
+      width: 100%;      // Mantén la imagen al 100% del ancho del contenedor
+      height: auto;     // Asegúrate de que mantenga su proporción
+      max-height: 100%; // Limita su altura
+  }
+
+  .form-overlay {
       position: absolute;
-      top: 50%;
+      top: 20%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
+      transform: translate(-50%, -20%);
+      width: 80%;
+      max-width: 400px;
+  }
+
+  .contact-overlay {
+      position: absolute;
+      bottom: 20%;  // Coloca la información de contacto sobre el SVG derecho.
+      right: 10%;
+      width: 80%;
+      max-width: 300px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-  
+      color: #fff;
+
       .contact-item {
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-  
-        .icon {
-          width: 24px;
-          height: 24px;
-          margin-right: 1rem;
-        }
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+
+          .icon {
+              width: 24px;
+              height: 24px;
+              margin-right: 1rem;
+          }
       }
-    }
   }
-  
+
+  .form-control {
+      border-radius: 20px;
+      padding: 0.75rem;
+  }
+
+  button {
+      background-color: #FF9E15;
+      color: #fff;
+      border-radius: 20px;
+      padding: 0.5rem 1.5rem;
+  }
+}

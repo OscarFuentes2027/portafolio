@@ -1,4 +1,3 @@
-import './style.css'
 
 function Header() {
   return (
@@ -41,7 +40,7 @@ function Header() {
               <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li className="nav-item">
                   <a
-                    className="nav-link mx-lg-2 active"
+                    className="nav__a nav-link mx-lg-2 active text-lg-white text-black"
                     aria-current="page"
                     href="#"
                     >
@@ -49,17 +48,17 @@ function Header() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2" href="#">
+                  <a className="nav__a nav-link mx-lg-2 text-lg-white text-black " href="#">
                     Habilidades
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2" href="#">
+                  <a className="nav__a nav-link mx-lg-2 text-lg-white text-black" href="#">
                     Proyectos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2" href="#">
+                  <a className="nav__a nav-link mx-lg-2 text-lg-white text-black" href="#">
                     Contactame
                   </a>
                 </li>
