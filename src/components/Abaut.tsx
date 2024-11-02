@@ -31,14 +31,13 @@ const Abaut = () => {
           </div>
         </div>
 
-        {/* Columna derecha: Imagen SVG */}
         <div className="hero__images col-8 col-lg-6 ">
           <img
             src={Oscar1}
-            alt="Tu descripción"
+            alt="Oscar Fuentes"
             className="hero__img img-fluid w-75"
           />
-          <img src={SvgImage} alt="Tu descripción" className="img-fluid" />
+          <img src={SvgImage} alt="Habilidades principales" className="img-fluid" />
         </div>
       </div>
     </section>

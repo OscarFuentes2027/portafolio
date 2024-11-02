@@ -46,7 +46,7 @@ function Footer() {
     <section className="my-section container-lg">
       <div className="row g-0 h-100 justify-content-center">
         <h2 className="display-5 text-uppercase mb-5">Contactame</h2>
-        <div className="col-12 col-lg-6 d-flex justify-content-center position-relative">
+        <div className="col-12 col-lg-6 d-none d-lg-flex justify-content-center position-relative">
           <img
             src={izquierda}
             alt="SVG Izquierdo"
@@ -76,6 +76,7 @@ function Footer() {
             </form>
           </div>
         </div>
+
         <div className="col-12 col-lg-6 d-flex justify-content-center position-relative">
           <img
             src={derecha}

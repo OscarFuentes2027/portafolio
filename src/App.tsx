@@ -5,6 +5,7 @@ import Abaut from './components/Abaut'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import Footter from './components/Footter'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <Abaut/>
     <Skills/>
     <Projects/>
-    <Footer/>
+    <Footter/>
     </>
   )
 }

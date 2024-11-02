@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 
-// Importa las imágenes
 import pro1 from '../assets/images/pro1.png';
 import pro2 from '../assets/images/pro2.png';
 import pro3 from '../assets/images/pro3.png';
@@ -30,10 +29,9 @@ function Projects() {
   ];
 
   return (
-    <section className="container-xxl my-5">
+    <section id="projects" className="container-xxl my-5">
       <h2 className="display-5 text-uppercase mb-5">Proyectos</h2>
 
-      {/* Carrusel para pantallas grandes */}
       <div className="d-none d-lg-block">
         <Swiper
           cssMode={true}
@@ -59,7 +57,6 @@ function Projects() {
         </Swiper>
       </div>
 
-      {/* Carrusel para pantallas pequeñas */}
       <div className="d-lg-none">
         <Swiper
           cssMode={true}
