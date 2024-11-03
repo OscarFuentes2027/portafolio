@@ -32,7 +32,7 @@ function Header({ toggleLanguage, language }: HeaderProps) {
 
           <div
             className="offcanvas offcanvas-end"
-            tabIndex="-1"
+            tabIndex={-1} // Cambiado a número
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >

@@ -1,9 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Projects.css";
 
-import 'swiper/css';
+import 'swiper/swiper-bundle.css';
+// @ts-ignore
 import 'swiper/css/navigation';
+// @ts-ignore
 import 'swiper/css/pagination';
+
+
+
 
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 
