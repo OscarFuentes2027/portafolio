@@ -1,25 +1,28 @@
-import 'bootstrap/dist/js/bootstrap.min.js'
-import { useState } from 'react'
-import Header from './components/Header'
-import Abaut from './components/Abaut'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
-import Footter from './components/Footter'
-
+import 'bootstrap/dist/js/bootstrap.min.js';
+import { useState } from 'react';
+import Header from './components/Header';
+import Abaut from './components/Abaut';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Footter from './components/Footter';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Especifica que el estado es de tipo 'es' | 'en'
+  const [language, setLanguage] = useState<'es' | 'en'>("es"); // Estado para el idioma
+
+  const toggleLanguage = () => {
+    setLanguage((prevLang) => (prevLang === "es" ? "en" : "es"));
+  };
 
   return (
     <>
-    <Header/>
-    <Abaut/>
-    <Skills/>
-    <Projects/>
-    <Footter/>
+      <Header toggleLanguage={toggleLanguage} language={language} />
+      <Abaut language={language} />
+      <Skills />
+      <Projects language={language} />
+      <Footter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

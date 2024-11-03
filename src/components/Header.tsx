@@ -1,17 +1,25 @@
 import LogoHeader from "../assets/logo.svg";
 import LogoOffcanvas from "../assets/logoNara.svg";
 
-function Header() {
+interface HeaderProps {
+  toggleLanguage: () => void; // Función que no recibe parámetros y no devuelve nada
+  language: 'es' | 'en'; // Define los tipos posibles para 'language'
+}
+
+function Header({ toggleLanguage, language }: HeaderProps) {
   return (
     <header className="container-xxl sticky-top pt-2">
       <nav className="navbar navbar-expand-lg bg-primary rounded-pill p-2">
         <div className="container-fluid">
-          {/* Logo del header */}
           <a className="navbar-brand me-auto p-0" href="#">
-            <img src={LogoHeader} alt="Logo Header" className="img-fluid" style={{ maxHeight: "40px" }} />
+            <img
+              src={LogoHeader}
+              alt="Logo Header"
+              className="img-fluid"
+              style={{ maxHeight: "40px" }}
+            />
           </a>
 
-          {/* Botón de menú para pantallas pequeñas */}
           <button
             className="navbar-toggler"
             data-bs-toggle="offcanvas"
@@ -22,7 +30,6 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Menú Offcanvas */}
           <div
             className="offcanvas offcanvas-end"
             tabIndex="-1"
@@ -30,9 +37,13 @@ function Header() {
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
-              {/* Logo diferente en el offcanvas */}
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                <img src={LogoOffcanvas} alt="Logo Offcanvas" className="img-fluid" style={{ maxHeight: "30px" }} />
+                <img
+                  src={LogoOffcanvas}
+                  alt="Logo Offcanvas"
+                  className="img-fluid"
+                  style={{ maxHeight: "30px" }}
+                />
               </h5>
               <button
                 type="button"
@@ -44,40 +55,71 @@ function Header() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2 active text-black d-lg-none" href="#hero">
-                    Inicio
+                  <a
+                    className="nav-link mx-lg-2 active text-black d-lg-none"
+                    href="#hero"
+                  >
+                    {language === "es" ? "Inicio" : "Home"}
                   </a>
-                  <a className="nav-link mx-lg-2 active text-white d-none d-lg-block" href="#hero">
-                    Inicio
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link mx-lg-2 text-black d-lg-none" href="#skills">
-                    Habilidades
-                  </a>
-                  <a className="nav-link mx-lg-2 text-white d-none d-lg-block" href="#skills">
-                    Habilidades
+                  <a
+                    className="nav-link mx-lg-2 active text-white d-none d-lg-block"
+                    href="#hero"
+                  >
+                    {language === "es" ? "Inicio" : "Home"}
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2 text-black d-lg-none" href="#projects">
-                    Proyectos
+                  <a
+                    className="nav-link mx-lg-2 text-black d-lg-none"
+                    href="#skills"
+                  >
+                    {language === "es" ? "Habilidades" : "Skills"}
                   </a>
-                  <a className="nav-link mx-lg-2 text-white d-none d-lg-block" href="#projects">
-                    Proyectos
+                  <a
+                    className="nav-link mx-lg-2 text-white d-none d-lg-block"
+                    href="#skills"
+                  >
+                    {language === "es" ? "Habilidades" : "Skills"}
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link mx-lg-2 text-black d-lg-none" href="#">
-                    Contactame
+                  <a
+                    className="nav-link mx-lg-2 text-black d-lg-none"
+                    href="#projects"
+                  >
+                    {language === "es" ? "Proyectos" : "Projects"}
                   </a>
-                  <a className="nav-link mx-lg-2 text-white d-none d-lg-block" href="#">
-                    Contactame
+                  <a
+                    className="nav-link mx-lg-2 text-white d-none d-lg-block"
+                    href="#projects"
+                  >
+                    {language === "es" ? "Proyectos" : "Projects"}
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    className="nav-link mx-lg-2 text-black d-lg-none"
+                    href="#contact"
+                  >
+                    {language === "es" ? "Contáctame" : "Contact"}
+                  </a>
+                  <a
+                    className="nav-link mx-lg-2 text-white d-none d-lg-block"
+                    href="#contact"
+                  >
+                    {language === "es" ? "Contáctame" : "Contact"}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
+          <button
+            onClick={toggleLanguage}
+            className="btn btn-light me-3"
+            style={{ color: "orange" }}
+          >
+            {language === "es" ? "EN" : "ES"}
+          </button>
         </div>
       </nav>
     </header>
